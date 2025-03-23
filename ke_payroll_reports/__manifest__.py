@@ -7,7 +7,7 @@
        """,
 
     'description': """
-        Generate KRA Returns, NSSF, NHIF, HELB, PAYROLL SUMMARY, NET PAY and HOUSING LEVY reports for Payslip batches. 
+        Generate KRA Returns, NSSF, SHIF, HELB, PAYROLL SUMMARY, NET PAY and HOUSING LEVY reports for Payslip batches. 
 
        This module enables you to generate financial reports for payslip batches. The deductions are input as Salary Rules in Odoo Payroll, which you use in your Salary Structure. Since a Batch Payslip already has the structure and rules applied to your payslips, the system will try to find NSSF, NHIF, HELB etc from your salary rules.
     """,
