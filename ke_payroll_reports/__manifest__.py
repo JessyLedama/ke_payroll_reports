@@ -31,5 +31,5 @@
 
     'price': 450,
     'currency': 'USD',
-    'license': 'OPL-1',
+    'license': 'LGPL-3.0',
 }
