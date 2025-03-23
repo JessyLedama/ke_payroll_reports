@@ -1,0 +1,14 @@
+<odoo>
+    <record id="hr_ke_localisation_details" model="ir.ui.view">
+        <field name="name">hr.ke.localisation</field>
+        <field name="model">res.company</field>
+        <field name="inherit_id" ref="base.view_company_form"/>
+        <field name="arch" type="xml">
+            <!-- Insert nssf and nhif details -->
+            <xpath expr="//field[@name='currency_id']" position="after">
+                <field name="nssf" />
+                <field name="nhif" />
+            </xpath>
+        </field>
+    </record>
+</odoo>

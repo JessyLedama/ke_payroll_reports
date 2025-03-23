@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="hr_payslip_run_form_inherit_print_button" model="ir.ui.view">
+        <field name="name">hr.payslip.run.form.inherit.print.button</field>
+        <field name="model">hr.payslip.run</field>
+        <field name="inherit_id" ref="hr_payroll_community.hr_payslip_run_form"/>
+        <field name="arch" type="xml">
+            <!-- Insert the print button before the action button -->
+            <xpath expr="//header/field[@name='state']" position="before">
+                <div class="o_dropdown dropdown">
+                    <button name="print_financials" type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown">
+                        Financial Reports
+                    </button>
+
+                    <div class="dropdown-menu">
+                        <button type="object" name="get_nssf_returns" class="dropdown-item">
+                            NSSF Returns
+                        </button>
+
+                        <button type="object" name="get_shif_returns" class="dropdown-item">
+                            SHIF Returns
+                        </button>
+
+                        <button type="object" name="get_payroll_summary" class="dropdown-item">
+                            Payroll Summary
+                        </button>
+
+                        <button type="object" name="get_net_pay" class="dropdown-item">
+                            Net Pay List
+                        </button>
+
+                        <button type="object" name="get_paye" class="dropdown-item">
+                            PAYE Returns
+                        </button>
+
+                        <button type="object" name="get_helb" class="dropdown-item">
+                            HELB Returns
+                        </button>
+
+                        <button type="object" name="get_housing_levy" class="dropdown-item">
+                            Housing Levy Returns
+                        </button>
+
+                        <button type="object" name="get_nita_levy" class="dropdown-item">
+                            NITA Levy Returns
+                        </button>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>

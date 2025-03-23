@@ -1,0 +1,28 @@
+<odoo>
+    <record id="hr_ke_employee_number" model="ir.ui.view">
+        <field name="name">hr.ke.localisation</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form"/>
+        <field name="arch" type="xml">
+            <!-- Insert employee number to employee form template -->
+            <xpath expr="//field[@name='mobile_phone']" position="before">
+                <field name="employee_no" />
+            </xpath>
+
+            <xpath expr="//field[@name='country_of_birth']" position="after">
+                <field name="kra_pin" />
+                <field name="nssf"/>
+                <field name="nhif"/>
+                <field name="account_number"/>
+                <field name="bank_code"/>
+                <field name="bank_branch"/>
+
+                <field name="disability"/>
+                <field name="resident"/>
+                <field name="emp_type"/>
+                <field name="helb"/>
+                <field name="helb_rate" attrs="{'invisible': [('helb', '=', False)]}"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
