@@ -31,5 +31,5 @@
 
     'price': 450,
     'currency': 'USD',
-    'license': 'LGPL-3',
+    'license': 'GPL-3',
 }
